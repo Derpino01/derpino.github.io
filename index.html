@@ -57,6 +57,15 @@
             buttonText.style.top = newPositionY + 'px'; // Set the new top position
             
         }
+        function onYesClicked() {
+            var container = document.querySelector('.container');
+            container.innerHTML = ''; // Remove all content from the container
+            
+            // Display GIF
+            var img = document.createElement('img');
+            img.src = 'bear-kiss-bear-kiss.gif'; // Replace 'path_to_your_gif.gif' with the path to your GIF file
+            container.appendChild(img);
+        }
   
     </script>
 </body>
