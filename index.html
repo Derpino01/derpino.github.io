@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+    <title>Will you be my Valentine?</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine?</h1>
+        <button class="custom-button" id="increaseBtn">Yes!</button>
+        <button class="changeTextBtn" id="moveBtn" onclick="nodaw()">No</button>
+    </div>
+    <script>    
+        var texts = [
+        "Isa pa",
+        "Ehh?",
+        "Last chance",
+        "ihhh",
+        "No talaga?",
+        "Sure?",
+        "Di pedeee",
+        "Ihh date tayoo",
+        "Hehehe yes nato",
+        "be minee",
+        "wait you're already mine",
+        "yes kanaa",
+        "yes kana plezz"
+
+    ];
+
+        var index = 0;
+
+        function nodaw(button) {
+            const buttonText = document.querySelector('.changeTextBtn');
+
+            buttonText.textContent = texts[index];
+            index = (index + 1) % texts.length;
+
+            var button = document.getElementById('increaseBtn');
+            var currentWidth = button.offsetWidth;
+            var currentHeight = button.offsetHeight;
+            var newWidth = currentWidth * 1.2; // Increase width by 20%
+            var newHeight = currentHeight * 1.2; // Increase height by 20%
+            button.style.width = newWidth + 'px';
+            button.style.height = newHeight + 'px';
+
+            var newPositionX = Math.random() * 300; // Generate a random X position (between 0 and 300)
+            var newPositionY = Math.random() * 300; // Generate a random Y position (between 0 and 300)
+            buttonText.style.position = 'relative'; // Set position to relative, absolute, or fixed
+            buttonText.style.left = newPositionX + 'px'; // Set the new left position
+            buttonText.style.top = newPositionY + 'px'; // Set the new top position
+            
+        }
+  
+    </script>
+</body>
+
+</html>

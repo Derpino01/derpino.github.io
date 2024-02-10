@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+.container {
+
+    text-align: center; 
+}
+h1 {
+    color: #e6005c;
+}   
+
+p {
+    line-height: 1;
+    color: #000000;
+}
+
+button {
+    padding: 5px 12px;
+    background-color: #e6005c;
+    color: #fff;
+    border: 2px solid #000000; /* Set border color */
+    border-radius: 16px; /* Set border radius */
+    font-size: 12px;
+    font-family: 'Single Day', sans-serif;
+
+
+}
